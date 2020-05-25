@@ -42,7 +42,7 @@ public class ShowCategory extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                URL miRuta= new URL("http://epok.buenosaires.gob.ar/buscar/?texto="+DatoRecibido);
+                URL miRuta= new URL("https://epok.buenosaires.gob.ar/buscar/?texto="+DatoRecibido);
                 HttpURLConnection MiConexion=(HttpURLConnection) miRuta.openConnection();
 
                 if(MiConexion.getResponseCode()==200)

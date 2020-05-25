@@ -58,7 +58,7 @@ public class SearchCategory extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
 
             try {
-                URL miRuta= new URL("http://epok.buenosaires.gob.ar/getCategorias");
+                URL miRuta= new URL("https://epok.buenosaires.gob.ar/getCategorias/");
                 HttpURLConnection MiConexion=(HttpURLConnection) miRuta.openConnection();
 
                 if(MiConexion.getResponseCode()==200)
