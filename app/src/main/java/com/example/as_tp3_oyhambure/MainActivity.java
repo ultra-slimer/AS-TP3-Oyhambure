@@ -16,23 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void ProximaVista(View vista)
-    {
-        int id=vista.getId();
-        if(id==R.id.BotonNombre)
-        {
-            Intent IrABuscarPorNombre=new Intent(this,SearchName.class);
-            startActivity(IrABuscarPorNombre);
+    public void ProximaVista(View vista) {
+        int id = vista.getId();
+        if (id == R.id.BotonNombre) {
+            Intent SearchByName = new Intent(this, SearchName.class);
+            startActivity(SearchByName);
         }
-        if(id==R.id.BotonCategoria)
-        {
-            Intent IrABuscarPorCategoria=new Intent(this,SearchCategory.class);
-            startActivity(IrABuscarPorCategoria);
+        if (id == R.id.BotonCategoria) {
+            Intent SearchByCategory = new Intent(this, SearchCategory.class);
+            startActivity(SearchByCategory);
         }
-        if(id==R.id.BotonRadio)
-        {
-            Intent IrABuscarPorRadio=new Intent(this,SearchRadio.class);
-            startActivity(IrABuscarPorRadio);
+        if (id == R.id.BotonRadio) {
+            Intent SearchByZone = new Intent(this, SearchRadio.class);
+            startActivity(SearchByZone);
         }
     }
 }

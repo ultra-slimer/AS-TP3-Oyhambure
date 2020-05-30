@@ -4,6 +4,7 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <Button
+        android:layout_marginTop="40sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buscar por categoria"
@@ -11,6 +12,8 @@
         android:onClick="ProximaVista"
         android:id="@+id/BotonCategoria"/>
     <Button
+
+        android:layout_marginTop="40sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buscar por nombre"
@@ -18,9 +21,10 @@
         android:onClick="ProximaVista"
         android:id="@+id/BotonNombre"/>
     <Button
+        android:layout_marginTop="40sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buscar por radio"
+        android:text="Buscar por coordenadas"
         android:textSize="30sp"
         android:onClick="ProximaVista"
         android:id="@+id/BotonRadio"/>

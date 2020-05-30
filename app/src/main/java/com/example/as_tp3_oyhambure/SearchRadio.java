@@ -27,14 +27,14 @@ public class SearchRadio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_radio);
-        seekbar=findViewById(R.id.SeekBarRadio);
-        PosicionX=findViewById(R.id.PosicionX);
-        posicionY=findViewById(R.id.PosicionY);
-        Categoria=findViewById(R.id.CategoriaIngresada);
-        ValorSeekBar=findViewById(R.id.TextoBarra);
+        seekbar = findViewById(R.id.SeekBarRadio);
+        PosicionX = findViewById(R.id.PosicionX);
+        posicionY = findViewById(R.id.PosicionY);
+        Categoria = findViewById(R.id.CategoriaIngresada);
+        ValorSeekBar = findViewById(R.id.TextoBarra);
         PosicionX.addTextChangedListener(Required);
         posicionY.addTextChangedListener(Required);
-        boton=findViewById(R.id.BotonBuscarRadio);
+        boton = findViewById(R.id.BotonBuscarRadio);
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -51,7 +51,7 @@ public class SearchRadio extends AppCompatActivity {
             }
         });
     }
-    private TextWatcher Required=new TextWatcher() {
+    private TextWatcher Required = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -59,10 +59,10 @@ public class SearchRadio extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
-            String TextoUno=PosicionX.getText().toString().trim();
-            String TextoDos=posicionY.getText().toString().trim();
+            String TextoUno = PosicionX.getText().toString().trim();
+            String TextoDos = posicionY.getText().toString().trim();
 
-            boton.setEnabled(!TextoUno.isEmpty()&&!TextoDos.isEmpty());
+            boton.setEnabled(!TextoUno.isEmpty() && !TextoDos.isEmpty());
         }
 
         @Override
@@ -70,14 +70,13 @@ public class SearchRadio extends AppCompatActivity {
 
         }
     };
-    public void BuscarRadio(View vista)
-    {
-        Intent llamar=new Intent(this,ShowRadio.class);
-        Bundle paqueteDeDatos=new Bundle();
-        paqueteDeDatos.putString("positionX",PosicionX.getText().toString());
-        paqueteDeDatos.putString("posicionY",posicionY.getText().toString());
-        paqueteDeDatos.putInt("radio",seekbar.getProgress());
-        paqueteDeDatos.putString("categoria",Categoria.getText().toString());
+    public void BuscarRadio(View vista) {
+        Intent llamar = new Intent(this, ShowRadio.class);
+        Bundle paqueteDeDatos = new Bundle();
+        paqueteDeDatos.putString("positionX", PosicionX.getText().toString());
+        paqueteDeDatos.putString("posicionY", posicionY.getText().toString());
+        paqueteDeDatos.putInt("radio", seekbar.getProgress());
+        paqueteDeDatos.putString("categoria", Categoria.getText().toString());
         llamar.putExtras(paqueteDeDatos);
         startActivity(llamar);
     }

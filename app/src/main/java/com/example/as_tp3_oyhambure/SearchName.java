@@ -19,15 +19,14 @@ public class SearchName extends AppCompatActivity {
         setContentView(R.layout.activity_search_name);
 
     }
-    public void RecaudarInformacion(View vista)
-    {
+    public void RecaudarInformacion(View vista) {
         EditText editText;
-        editText=findViewById(R.id.NombreIngresado);
+        editText = findViewById(R.id.NombreIngresado);
 
-        String nombre=editText.getText().toString();
-        Intent llamar=new Intent(this,ShowCategory.class);
-        Bundle paqueteDeDatos=new Bundle();
-        paqueteDeDatos.putString("InformacionElegida",nombre);
+        String nombre = editText.getText().toString();
+        Intent llamar = new Intent(this, ShowCategory.class);
+        Bundle paqueteDeDatos = new Bundle();
+        paqueteDeDatos.putString("InformacionElegida", nombre);
         llamar.putExtras(paqueteDeDatos);
         startActivity(llamar);
     }
